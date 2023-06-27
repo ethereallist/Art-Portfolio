@@ -171,6 +171,12 @@ footer {
   gap: 20px;
 }
 
+/* quitar todo esto*/
+
+footer p {
+  font-size: 2rem;
+}
+
 footer small {
   font-size: 14px;
 }
