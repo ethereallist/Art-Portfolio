@@ -21,7 +21,10 @@ nav {
   justify-content: center;
   color: white;
   font-size: 1.5em;
-  background-color: rgba(128, 128, 128, 0.7);
+  /* background-color: rgba(128, 128, 128, 0.7); */
+  background-image: linear-gradient(to top, black, rgba(0, 0, 0, 0.4)), url('../Img/Footer/ruido.jpg');
+  background-position: center;
+  background-size: 20%;
   backdrop-filter: 10px;
   padding: 1.7em;
   background-color: black;
@@ -141,7 +144,9 @@ li>a:hover {
     url("data:image/svg+xml,%3Csvg viewBox='0 0 148 148' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='9.25' numOctaves='6' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 
-footer {
+/* FOOTER ORIGINAL */
+
+/* footer {
   background-color: black;
   color: white;
   text-align: center;
@@ -151,7 +156,30 @@ footer {
   justify-content: center;
   height: 250px;
   gap: 20px;
+} */
+
+footer {
+  background-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.5)), url('../Img/Footer/ruido.jpg');
+  background-size: contain;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+  gap: 20px;
 }
+
+footer small {
+  font-size: 14px;
+}
+
+footer button:hover {
+  box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.75);
+}
+
+/* GENERADO POR GPT */
 
 .img-footer img {
   margin: 2px;
@@ -258,35 +286,7 @@ iframe {
   z-index: 3;
 }
 
-.gallery {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-template-rows: auto;
-  gap: 1em;
-  width: 100%;
-  margin: 0 auto;
-}
 
-.img-about {
-  /* top: -15px; */
-  object-fit: cover;
-  height: 40vh;
-  width: 40vw;
-  min-width: 400px;
-  max-width: 99%;
-  max-height: 99%;
-  gap: 10px;
-  /* object-position: 50% 60%; */
-  margin: 0 auto;
-}
-
-.grande {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  height: 60vh;
-}
 
 /* Estilos de boton */
 
@@ -398,14 +398,37 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+/* anterior carrousel */
+
+/* .grande {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 60vh;
+} */
+
 /* CARROUSEL */
+
+.carrousel {
+  width: 100%;
+  max-width: 120em;
+  background-color: bisque;
+}
 
 /* Nota: El tamaño del carrousel equivale a cuantas veces los elementos (que ocupan cada uno 100%) se salen de la pantalla. 
 Ejemplo: Si son dos imágenes que ocupan el 100% de la pantalla horizontalmente, entonces el Div grande tiene un width de 200% */
 
 /* Div grande */
 
-
+.carrousel .grande {
+  width: 400%;
+  background-color: orange;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
 
 
 /* Nota: Para saber el tamaño de este Div se debe dividir 100% entre el número de elementos que hayan dentro. 
@@ -413,5 +436,72 @@ Por ejemplo: Si hay 3 elementos el cálculo es 100% / 3. El resultado es el tama
 
 /* Div pequeño */
 
+.carrousel .img {
+  width: calc( 100% / 4);
+  background-color: rgb(255, 255, 255);
+  object-fit: cover;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+
 /* Los movimientos se hacen con transform translate en el eje X, lo cual mueve a los elementos de manera horizontal. 
 El porcentaje es el mismo que el tamaño de cada elementos sumado.*/
+
+.carrousel .puntos {
+  width: 100%;
+  background-color: red;
+  padding: 1em; 
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.carrousel .punto {
+  width: 2em;
+  height: 2em;
+  margin: 1em;
+  background-color: blue;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: 10px;
+  width: 800px; 
+  max-width: 90vw;
+}
+
+/* anterior edit imagenes carrousel  */
+
+/* Servicios */
+
+.servicio {
+  margin-bottom: 30px; /* Agregamos un margen inferior para separar los servicios */
+  align-self: flex-end;
+}
+
+.servicio h3 {
+  border-bottom: 2px solid black; /* Agregamos una línea horizontal debajo del título */
+  padding-bottom: 10px; /* Agregamos un espacio inferior para separar el título de la descripción */
+}
+
+.contenedor-servicios {
+  display: flex; /* Utilizamos flexbox para crear las columnas */
+  justify-content: space-between; /* Distribuimos los elementos en el espacio sobrante */
+  flex-direction: row;
+  width: 100%;
+  max-width: 90%;
+  gap: 30px;
+  margin: 0 auto;
+}
+
+.title-services {
+  display: block;
+  margin-bottom: 2em;
+  font-weight: 700;
+  font-family: Lora, sans-serif;
+  margin-top: 2em;
+}
