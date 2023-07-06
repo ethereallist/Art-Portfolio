@@ -2,7 +2,6 @@
   margin: 0;
   box-sizing: border-box;
   font-family: 'Quicksand', sans-serif;
- font-size: 16px;
 }
 
 body {
@@ -173,9 +172,6 @@ footer {
 
 /* quitar todo esto*/
 
-footer p {
-  font-size: 2rem;
-}
 
 footer small {
   font-size: 14px;
@@ -434,6 +430,9 @@ Ejemplo: Si son dos imágenes que ocupan el 100% de la pantalla horizontalmente,
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
+  justify-content: space-between;
+  transition: all .5s ease;
+  transform: translateX();
 }
 
 
@@ -446,8 +445,9 @@ Por ejemplo: Si hay 3 elementos el cálculo es 100% / 3. El resultado es el tama
   width: calc( 100% / 4);
   background-color: rgb(255, 255, 255);
   object-fit: cover;
-  min-width: 100%;
-  max-width: 100%;
+  height: 50vh;
+  width: 70vw;
+  
 }
 
 
@@ -478,6 +478,12 @@ El porcentaje es el mismo que el tamaño de cada elementos sumado.*/
   margin-top: 10px;
   width: 800px; 
   max-width: 90vw;
+}
+
+/* Movimiento del carrousel */
+
+.carrousel .punto.activo {
+  background-color: orange;
 }
 
 /* anterior edit imagenes carrousel  */
